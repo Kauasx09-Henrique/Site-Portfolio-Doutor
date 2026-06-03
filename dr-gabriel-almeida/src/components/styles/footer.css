@@ -1,0 +1,140 @@
+.footer-container {
+    background: var(--primary);
+    color: var(--white);
+    padding: 5rem 0 0 0;
+    border-top: 4px solid var(--accent);
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 6rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer-logo-first {
+    color: var(--white);
+}
+
+.footer-logo-second {
+    color: var(--accent);
+}
+
+.footer-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 350px;
+}
+
+.footer-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--accent);
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.footer-nav a:hover {
+    color: var(--accent);
+    transform: translateX(5px);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.contact-highlight {
+    color: var(--accent) !important;
+    font-weight: 700;
+    font-size: 1.1rem !important;
+    margin-top: 0.5rem;
+}
+
+.footer-bottom-wrapper {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom {
+    padding: 1.5rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-dev {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .footer-content {
+        padding: 0 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-bottom {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

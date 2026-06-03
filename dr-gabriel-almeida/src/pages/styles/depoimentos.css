@@ -1,0 +1,128 @@
+.depoimentos-container {
+    padding: 6rem 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: calc(100vh - 80px);
+    background: var(--bg);
+}
+
+.depoimentos-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    animation: fadeInUp 0.8s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.depoimento-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.depoimento-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(13, 43, 62, 0.08);
+    border-color: transparent;
+}
+
+.quote-mark {
+    font-family: 'Merriweather', serif;
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--accent);
+    opacity: 0.2;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+}
+
+.depoimento-text {
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+}
+
+.depoimento-footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-family: 'Merriweather', serif;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.author-desc {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.depoimento-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.depoimento-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.depoimento-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.center-cta {
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .depoimentos-container {
+        padding: 4rem 2rem;
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .depoimentos-container {
+        padding: 3rem 1.5rem;
+    }
+}
